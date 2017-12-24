@@ -1,0 +1,13 @@
+[Unit]
+Description=Lock screen as user %i
+Before=screenlock.target
+
+[Service]
+Type=simple
+User=%i
+Environment=DISPLAY=:0
+ExecStart=/usr/bin/slock
+Restart=on-failure
+
+[Install]
+RequiredBy=screenlock.target

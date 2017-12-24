@@ -1,0 +1,7 @@
+[Unit]
+Description=Lock screen
+Before=suspend.target
+StopWhenUnneeded=true
+
+[Install]
+RequiredBy=suspend.target

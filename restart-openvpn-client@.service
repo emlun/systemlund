@@ -1,0 +1,10 @@
+[Unit]
+Description=Restart OpenVPN client %i
+After=suspend.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/systemctl restart openvpn-client@%i.service
+
+[Install]
+WantedBy=suspend.target
