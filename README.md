@@ -7,6 +7,8 @@ emlun's systemd units.
 Usage
 ---
 
+Arch Linux users:
+
     $ makepkg -i
     # systemctl daemon-reload
     # systemctl enable screenlock.target
