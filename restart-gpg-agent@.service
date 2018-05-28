@@ -1,0 +1,11 @@
+[Unit]
+Description=Kill gpg-agent for user %i after sleep
+After=screenlock.target
+
+[Service]
+Type=oneshot
+User=%i
+ExecStart=/bin/killall gpg-agent
+
+[Install]
+RequiredBy=screenlock.target
