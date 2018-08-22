@@ -1,7 +1,7 @@
 # Maintainer: Emil Lundberg <emil@emlun.se> (emlun)
 
 pkgname='systemlund'
-pkgver='1.2.0'
+pkgver='1.3.0'
 pkgrel=1
 pkgdesc="emlun's systemd units"
 license=('custom:unlicense')
