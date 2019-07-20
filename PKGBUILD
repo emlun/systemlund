@@ -15,8 +15,9 @@ source=('git+https://github.com/emlun/systemlund.git')
 sha1sums=('SKIP')
 
 package() {
-  install -d -m 755 "${pkgdir}/usr/lib/systemd/system"
+  install -d -m 755 "${pkgdir}/usr/lib/systemd/system" "${pkgdir}/etc/systemd/system"
   install -D -m 444 "${srcdir}/${pkgname}"/*.service "${srcdir}/${pkgname}"/*.target "${pkgdir}/usr/lib/systemd/system"
+  install -D -m 444 "${srcdir}/${pkgname}"/etc/*.service "${srcdir}/${pkgname}"/*.target "${pkgdir}/etc/systemd/system"
 
   for dir in "${srcdir}/${pkgname}"/*.service.d ; do
     local _confdir=${dir#${srcdir}/${pkgname}/}
