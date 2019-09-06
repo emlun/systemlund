@@ -1,14 +1,14 @@
 # Maintainer: Emil Lundberg <emil@emlun.se> (emlun)
 
 pkgname='systemlund'
-pkgver='1.3.0'
+pkgver='2.0.0'
 pkgrel=1
 pkgdesc="emlun's systemd units"
 license=('custom:unlicense')
 arch=('any')
 url='https://github.com/emlun/systemlund'
 optdepends=(
-  'slock: For screenlock@.service'
+  'swaylock: For screenlock@.service'
   'openvpn: For restart-openvpn-client@.service'
 )
 source=('git+https://github.com/emlun/systemlund.git')

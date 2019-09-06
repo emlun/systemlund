@@ -6,7 +6,7 @@ Before=screenlock.target
 Type=simple
 User=%i
 Environment=DISPLAY=:0
-ExecStart=/bin/slock
+ExecStart=/usr/bin/swaylock
 Restart=on-failure
 
 [Install]
