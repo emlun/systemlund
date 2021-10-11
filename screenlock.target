@@ -1,7 +1,9 @@
 [Unit]
 Description=Lock screen
+Before=hibernate.target
 Before=suspend.target
 StopWhenUnneeded=true
 
 [Install]
+RequiredBy=hibernate.target
 RequiredBy=suspend.target
