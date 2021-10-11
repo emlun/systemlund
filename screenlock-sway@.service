@@ -5,8 +5,10 @@ Before=screenlock.target
 [Service]
 Type=simple
 User=%i
-Environment=DISPLAY=:0
-ExecStart=/bin/slock
+Environment=DISPLAY=:1
+Environment=WAYLAND_DISPLAY=wayland-1
+Environment=XDG_RUNTIME_DIR=/run/user/1000
+ExecStart=/usr/bin/swaylock
 Restart=on-failure
 
 [Install]
